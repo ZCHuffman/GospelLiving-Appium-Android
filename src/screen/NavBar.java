@@ -19,15 +19,31 @@ public class NavBar extends AbstractScreen {
 		btnHome.click();
 	}
 
+	public boolean HomePageIsDisplayed() {
+		return driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView")).isDisplayed();
+	}
+
 	public void NavToGoals() {
 		btnGoals.click();
+	}
+
+	public boolean GoalsPageIsDisplayed() {
+		return driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView")).isDisplayed();
 	}
 
 	public void NavToImpressions() {
 		btnImpressions.click();
 	}
 
+	public boolean ImpressionsPageIsDisplayed() {
+		return driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView")).isDisplayed();
+	}
+
 	public void NavToMore() {
 		btnMore.click();
+	}
+
+	public boolean MorePageIsDisplayed() {
+		return driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView")).isDisplayed();
 	}
 }

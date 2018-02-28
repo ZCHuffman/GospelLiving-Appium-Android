@@ -13,9 +13,7 @@ import java.net.URL;
 
 public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
 
-	public static AndroidDriverBuilder forAndroid() {
-		return new AndroidDriverBuilder();
-	}
+
 
 	public static class AndroidDriverBuilder extends AppiumDriverBuilder<AndroidDriverBuilder, AndroidDriver> {
 
@@ -24,11 +22,13 @@ public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
 		public AndroidDriver build() {
 
 			DesiredCapabilities capabilities = new DesiredCapabilities();
-			capabilities.setCapability("deviceName", "98895432524f315a44");
-			capabilities.setCapability("app", "/Users/elderhuffman/Downloads/gospel-living-alpha-20180221-1824.apk");
+
 			capabilities.setCapability("platformName", "android");
-			capabilities.setCapability("appPackage", "org.lds.gliv.dev");
+			capabilities.setCapability("app", "/Users/elderhuffman/Downloads/gospel-living-alpha-20180223-2327.apk");
+			capabilities.setCapability("deviceName", "98895432524f315a44");
 			capabilities.setCapability("appActivity", "org.lds.gliv.ui.main.SplashActivity");
+			capabilities.setCapability("appPackage", "org.lds.gliv.alpha");
+
 
 			return new AndroidDriver(capabilities);
 		}
@@ -36,7 +36,8 @@ public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
 
 	public abstract DRIVER build();
 
-//	public static AndroidDriverBuilder forAndroid() {
-//		return new AndroidDriverBuilder();
-//	}
+	public static AndroidDriverBuilder forAndroid() {
+		return new AndroidDriverBuilder();
+	}
+
 }

@@ -16,7 +16,7 @@ public abstract class AbstractTest {
 
 		app = new GL(driver);
 
-		driver.switchTo().alert().accept();
+		//driver.switchTo().alert().accept();
 	}
 
 	@After

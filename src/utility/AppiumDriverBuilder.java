@@ -24,10 +24,10 @@ public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
 			DesiredCapabilities capabilities = new DesiredCapabilities();
 
 			capabilities.setCapability("platformName", "android");
-			capabilities.setCapability("app", "/Users/elderhuffman/Downloads/gospel-living-alpha-20180223-2327.apk");
+			capabilities.setCapability("app", "/Users/elderhuffman/Documents/gospel-living-alpha-20180330-1930.apk");
 			capabilities.setCapability("deviceName", "98895432524f315a44");
 			capabilities.setCapability("appActivity", "org.lds.gliv.ui.main.SplashActivity");
-			capabilities.setCapability("appPackage", "org.lds.gliv.alpha");
+			capabilities.setCapability("appPackage", "org.lds.gliv.dev");
 
 
 			return new AndroidDriver(capabilities);
